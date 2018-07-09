@@ -21,6 +21,8 @@ class CoreHTML(scrapy.Item):
     
     # HTTP Header
     cache_control = scrapy.Field()
+    redirect_location = scrapy.Field()
+    referrer = scrapy.Field()
     
     # AMP
     amp_html = scrapy.Field()
@@ -33,9 +35,12 @@ class CoreHTML(scrapy.Item):
     meta_robots = scrapy.Field()
     title = scrapy.Field()
     title_length = scrapy.Field()
+    title_count = scrapy.Field()
     description = scrapy.Field()
     description_length = scrapy.Field()
+    description_count = scrapy.Field()
     h1 = scrapy.Field()
+    h1_count = scrapy.Field()
     canonical = scrapy.Field()
     canonical_self = scrapy.Field()
     wordcount = scrapy.Field()
